@@ -1,0 +1,78 @@
+/* Header */
+
+.header {
+    font-family: "Gilroy", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    color: #cacaca;
+    padding: 0px 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.header__logo {
+    height: 60px;
+}
+.header__list {
+    display: flex;
+}
+
+.header__item {
+    margin-right: 70px;
+    text-transform: uppercase;
+    transition: color .4s;
+    
+    &:last-child {
+        margin-right: 0px;
+    }
+    
+    &:hover {
+        color: #fff;
+        
+        &:active {
+            color: #f49a51;
+        }
+    }
+}
+.header__call-back {
+    display: flex;
+    flex-direction: column;
+    
+    a {
+        font-weight: 600;
+        font-size: 24px;
+        color: #fff;
+        transition: color .4s;
+        
+        &:hover {
+            color: #f49a51;
+            
+            &:active {
+                color: #cc6e22;
+            }
+        }
+    }
+}
+
+.header__call-back__button {
+    border: none;
+    background: none;
+    color: #cacaca;
+    cursor: pointer;
+    transition: color .4s;
+    
+    &:hover {
+        color: #f49a51;
+        
+        &:active {
+            color: #cc6e22;
+        }
+    }
+}
+
+
+/* /Header */
