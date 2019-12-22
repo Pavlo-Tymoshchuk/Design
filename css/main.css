@@ -512,6 +512,7 @@ button {
   color: #cacaca;
   cursor: pointer;
   transition: color 0.4s;
+  outline: none;
 }
 .header__call-back__button:hover {
   color: #f49a51;
@@ -1324,6 +1325,14 @@ button {
 .implementation__slider-item.show + .implementation__slider-item {
   transform: translateX(1000px);
 }
+.implementation__slider-item.return-value .implementation__slider-img {
+  width: 50% !important;
+  transition: width 0.4s;
+}
+.implementation__slider-item.return-value .implementation__range {
+  left: 50% !important;
+  transition: left 0.4s;
+}
 .implementation__slider-img {
   position: absolute;
   height: 100%;
@@ -1750,4 +1759,76 @@ button {
   background: url(../img/decor-bg.png) repeat center;
   color: #372f2c;
   font-size: 12px;
+}
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  background-color: #fff;
+  max-height: 100%;
+  overflow: auto;
+}
+.popup.show {
+  display: block;
+  animation: show-popup 0.4s;
+}
+@keyframes show-popup {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+.overlay.show {
+  display: block;
+}
+.popup__call-back {
+  padding: 50px 60px 60px;
+  color: #4c443f;
+}
+.popup__call-back .main-form__callback {
+  flex-direction: column;
+}
+.popup__call-back .main-form__callback label {
+  margin-bottom: 20px;
+}
+.popup__call-back .main-form__callback label:last-of-type {
+  margin-bottom: 30px;
+}
+.popup__call-back .main-form__callback .main-input {
+  width: 300px;
+}
+.popup__call-back .popup__wrapper {
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+}
+.popup__caption {
+  font-family: 'Playfair Display SC';
+  font-weight: 800px;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.popup-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
 }

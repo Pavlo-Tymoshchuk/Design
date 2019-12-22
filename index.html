@@ -28,7 +28,7 @@
         </ul>
         <div class="header__call-back">
             <a href="tell: 7 (926) 555 55 55">7 (926) 555 55 55</a>
-            <button class="header__call-back__button">Заказать обратный звонок</button>
+            <button class="header__call-back__button js-button" data-target="call-back">Заказать обратный звонок</button>
         </div>
     </header>
     <section class="main-block" style="background-image: url(./img/main-bg.png);">
@@ -828,13 +828,13 @@
             <div class="implementation__slider">
                 <ul class="implementation__slider-list">
                     <li class="implementation__slider-item show">
-                        <div class="implementation__slider-img range" style="width: 50%;">
+                        <div class="implementation__slider-img range" style="width: 400px;">
                             <img src="./img/implementation-img-1.png" alt="Дизайн-проект">
                             <div class="implemetation__slider-name">
                                 <p>Дизайн-проект</p>
                             </div>
                         </div>
-                        <div class="implementation__slider-img" style="width: 50%;">
+                        <div class="implementation__slider-img" style="width: 400px;">
                             <img src="./img/implementation-img-2.png" alt="Реализация">
                             <div class="implemetation__slider-name">
                                 <p>Реализация</p>
@@ -1162,7 +1162,129 @@
     <footer class="footer">
         <p>© 2019  “Дизайн интерьеров”</p>
     </footer>
+    <section class="popup popup__call-back" data-target='call-back'>
+        <h3 class="popup__caption">Хотите заказать проект?</h3>
+        <div class="popup__wrapper">
+            <h6 class="main-form__title">Ваши контактные данные:</h6>
+            <div class="main-form__callback">
+                <label class="main-input__wrapper">
+                    <input type="text" class="main-input" placeholder="Имя">
+                </label>
+                <label class="main-input__wrapper">
+                    <input type="text" class="main-input error" placeholder="Телефон*">
+                    <p class="error-text">поле не заполнено/заполнено неверно</p>
+                </label>
+                <button class="main-button">Отправить запрос</button>
+            </div>
+        </div>
+        <div class="popup-close">+</div>
+    </section>
+    <section class="popup popup__consultation" data-target='consultation'>
+        <div class="main-form">
+            <h3 class="main-form__caption">форма записи</h3>
+            <h6 class="main-form__title">Укажите площадь помещения:</h6>
+            <div class="main-form__square">
+                <label>
+                    <input type="radio" name="square3" value="30-100 м2" checked="">
+                    <span>30-100 м2</span>
+                </label>
+                <label>
+                    <input type="radio" name="square3" value="100-200 м2">
+                    <span>100-200 м2"</span>
+                </label>
+                <label>
+                    <input type="radio" name="square3" value="200-500 м2">
+                    <span>200-500 м2</span>
+                </label>
+                <label>
+                    <input type="radio" name="square3" value=">500 м2">
+                    <span>&gt;500 м2</span>
+                </label>
+            </div>
+            <h6 class="main-form__title">Выберите тип обьекта:</h6>
+            <div class="main-form__type">
+                <label>
+                    <input type="radio" name="type3" value="Квартира" checked="">
+                    <span class="custom-radio"></span>
+                    <p>Квартира</p>
+                </label>
+                <label>
+                    <input type="radio" name="type3" value="Дом">
+                    <span class="custom-radio"></span>
+                    <p>Дом</p>
+                </label>
+                <label>
+                    <input type="radio" name="type3" value="Офис">
+                    <span class="custom-radio"></span>
+                    <p>Офис</p>
+                </label>
+                <label>
+                    <input type="radio" name="type3" value="Другое">
+                    <span class="custom-radio"></span>
+                    <p>Другое</p>
+                </label>
+            </div>
+            <h6 class="main-form__title">Загрузите Ваши планы:</h6>
+            <div class="main-form__callback">
+                <label class="main-input__wrapper">
+                    <input type="text" class="main-input" placeholder="Имя">
+                </label>
+                <label class="main-input__wrapper">
+                    <input type="text" class="main-input error" placeholder="Телефон*">
+                    <p class="error-text">поле не заполнено/заполнено неверно</p>
+                </label>
+            </div>
+            <h6 class="main-form__title">Загрузите Ваши планы:</h6>
+            <p class="main-form__sub-title">Необходимо для подготовки к встрече</p>
+            <div class="main-form-button__wrapper">
+                <div class="main-form__file">
+                    <button>
+                        <label for="offer-file-3">Загрузить файл</label>
+                    </button>
+                    <input type="file" name="file" id="offer-file-3" class="offers-file" onchange="previewFile()">
+                    <div class="main-form__name">
+                        <p></p>
+                        <span></span>
+                    </div>
+                </div>
+                <button class="main-button">Записаться</button>
+                </div>
+            </div>
+        </div>
+        <div class="popup-close">+</div>
+    </section>
+    <section class="popup popup__portfolio" data-target='portfolio'>
+        <div class="popup__portfolio-information">
+            <h2 class="main_caption">Деревянный лофт в Зиларт</h2>
+            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                важные задания по разработке системы обучения кадров, соответствует 
+                насущным потребностям. Разнообразный и богатый опыт консультация с 
+                широким активом представляет собой интересный эксперимент проверки 
+                направлений прогрессивного развития. Значимость этих проблем настолько 
+                очевидна, что рамки и место обучения кадров требуют определения и 
+                уточнения модели развития. Идейные соображения значение позиций, 
+                занимаемых участниками в отношении поставленных задач.</p>
+            <button class="main-button">Заказать такой же</button>
+        </div>
+        <div class="popup__portfolio-slider">
+            <div class="portfolio-slider__img">
+                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+            </div>
+            <ul class="portfolio-slider__list">
+                <li class="portfolio-slider__item"><img src="" alt=""></li>
+                <li class="portfolio-slider__item"><img src="" alt=""></li>
+                <li class="portfolio-slider__item"><img src="" alt=""></li>
+                <li class="portfolio-slider__item"><img src="" alt=""></li>
+                <li class="portfolio-slider__item"><img src="" alt=""></li>
+                <li class="portfolio-slider__item"><img src="" alt=""></li>
+                <li class="portfolio-slider__item"><img src="" alt=""></li>
+                <li class="portfolio-slider__item"><img src="" alt=""></li>
+            </ul>
+        </div>    
+    </section>
+    <div class="overlay"></div>
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

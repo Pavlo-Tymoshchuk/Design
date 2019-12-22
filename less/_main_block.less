@@ -962,6 +962,18 @@
             transform: translateX(1000px);
         }
     }
+
+    &.return-value {
+        .implementation__slider-img {
+            width: 50% !important;
+            transition: width .4s;
+        }
+        
+        .implementation__range {
+            left: 50% !important;
+            transition: left .4s;
+        }
+    }
 }
 
 .implementation__slider-img {
@@ -987,7 +999,7 @@
         right: 0;
         bottom: 0;
     }
-    
+
     &.range {
         z-index: 2;
         left: 0;
