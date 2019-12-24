@@ -14,16 +14,16 @@
         </a>
         <ul class="header__list">
             <li class="header__item">
-                <a href="#">о нас</a>
+                <a href="#about-us" class="js-link">о нас</a>
             </li>
             <li class="header__item">
-                <a href="#">услуги</a>
+                <a href="#offers" class="js-link">услуги</a>
             </li>
             <li class="header__item">
-                <a href="#">портфолио</a>
+                <a href="#portfolio" class="js-link">портфолио</a>
             </li>
             <li class="header__item">
-                <a href="#">контакты</a>
+                <a href="#contact" class="js-link">контакты</a>
             </li>
         </ul>
         <div class="header__call-back">
@@ -40,8 +40,8 @@
                     <li>Поставка мебели и материалов. Решение под любой бюджет</li>
                     <li>Начинаем работать сразу после получения заявки.</li>
                 </ul>
-                <button class="main-button">рассчитать стоимость проектирования</button>
                 <div class="main-block__decor"></div>
+                <button class="main-button js-button" data-target="consultation">рассчитать стоимость проектирования</button> 
             </div>
             <div class="main-block__item">
                 <h2 class="general__caption">Ремонтные работы</h2>
@@ -50,16 +50,27 @@
                     <li>Решение под любой бюджет</li>
                     <li>Начинаем работать сразу после получения заявки</li>
                 </ul>
-                <button class="main-button">рассчитать стоимость ремонта</button>
                 <div class="main-block__decor"></div>
+                <button class="main-button js-button" data-target="consultation">рассчитать стоимость ремонта</button>
+            </div>
+            <div class="svg-decor">
+                <svg viewBox='0 0 100 100' class="svg-content" preserveAspectRatio="none">
+                    <defs>
+                        <mask id='mask-1' x='0' y='0' width='100' height='100'>
+                            <rect x="0" y="0" width="100" height="100" fill="#fff" mask="url(#mask-1)"></rect>
+                            <text class="text" fill='#000' id="text" font-size="50px" font-family= "Playfair Display SC" font-weight="800">D</text>
+                        </mask>
+                    </defs>
+                    <rect x="0" y="0" width="100" height="100" fill="rgba(37,32,32,0.8)" mask="url(#mask-1)"></rect>
+                </svg>
             </div>
         </div>
         <div class="main-block__call-back">
             <p>Остались вопросы?</p>
-            <button>Получите консультацию у нашего специалиста!</button>
+            <button class="js-button" data-target="call-back">Получите консультацию у нашего специалиста!</button>
         </div>
     </section>
-    <section class="our-works">
+    <section class="our-works" id="about-us">
         <div class="our-works__wrapper container">
             <div class="our-works__block">
                 <h2 class="main_caption">твой <br>дизайн</h2>
@@ -110,16 +121,33 @@
                 </div>
             </div>
             <div class="our-works__button">
-                <button class="main-button">Получить бесплатную консультацию</button>
+                <button class="main-button js-button" data-target="call-back">Получить бесплатную консультацию</button>
             </div>
+            <div class="word-decor">E</div>
         </div>
         <div class="description-block">
             <span></span>
             <p>чем мы занимаемся</p>
         </div>
     </section>
-    <section class="offers-block">
-        <div class="offers-block__background" style="background-image: url(./img/offers-bg.png)"></div>
+    <section class="offers-block" id="offers">
+        <div class="offers-block__background" style="background-image: url(./img/offers-bg.jpg)">
+            <div class="svg-decor">
+                <svg viewBox='0 0 100 100' class="svg-content" preserveAspectRatio="none">
+                    <defs>
+                        <mask id='mask-2' x='0' y='0' width='100' height='100'>
+                            <rect class="decor-bg" x='5' y='10' width="90" height="30" fill="rgba(255,255,255,0.5)" />
+                            <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255,0.8)"></rect>
+                            <rect x="0" y="0" width="100" height="5" fill="#fff"></rect>
+                            <text x="0" y="0" class="text" fill='#000' id="text" font-size="40px" font-family= "Playfair Display SC">S</text>
+                        </mask>
+                    </defs>
+                    <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255,1)" mask="url(#mask-2)"></rect>
+                </svg>
+                <div class="offer-decor-bg"></div>
+            </div>
+            <div class="decor-line"></div>
+        </div>
         <div class="offers-block__wrapper container">
             <h2 class="main_caption">пакеты услуг проектирования</h2>
             <ul class="offers-block__list">
@@ -161,7 +189,7 @@
                         </div>
                     </div>
                     <p class="offers-price">1990 <span>руб/м2</span></p>
-                    <button class="main-button">Заказать</button>
+                    <button class="main-button js-button" data-target="consultation">Заказать</button>
                 </li>
                 <li class="offers-block__item">
                     <h5 class="caption">Оптимальный</h5>
@@ -200,7 +228,7 @@
                         </div>
                     </div>
                     <p class="offers-price">1990 <span>руб/м2</span></p>
-                    <button class="main-button">Заказать</button>
+                    <button class="main-button js-button" data-target="consultation">Заказать</button>
                 </li>
                 <li class="offers-block__item">
                     <h5 class="caption">Премиум</h5>
@@ -239,7 +267,7 @@
                         </div>
                     </div>
                     <p class="offers-price">1990 <span>руб/м2</span></p>
-                    <button class="main-button">Заказать</button>
+                    <button class="main-button js-button" data-target="consultation">Заказать</button>
                 </li>
                 <li class="offers-block__item">
                     <h5 class="caption">Ваш вариант</h5>
@@ -299,7 +327,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="main-button">рассчитать стоимость</button>
+                    <button class="main-button js-button" data-target="call-back">рассчитать стоимость</button>
                 </li>
             </ul>
         </div>
@@ -309,7 +337,22 @@
         </div>
     </section>
     <section class="offers-block">
-        <div class="offers-block__background" style="background-image: url(./img/offers-bg.png)"></div>
+        <div class="offers-block__background" style="background-image: url(./img/offers-bg.jpg)">
+            <div class="svg-decor offers">
+                <svg viewBox='0 0 100 100' class="svg-content" preserveAspectRatio="xMinYMin meet">
+                    <defs>
+                        <mask id='mask-3' x='0' y='0' width='100' height='100'>
+                            <rect class="decor-bg" x='5' y='10' width="90" height="30" fill="rgba(255,255,255,0.5)" />
+                            <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255,0.8)"></rect>
+                            <rect x="0" y="0" width="100" height="5" fill="#fff"></rect>
+                            <text x="2" y="40" height="10" class="text" fill='#000' id="text" font-size="40px" font-weight="800" font-family= "Playfair Display SC" opacity="0.8">I</text>
+                        </mask>
+                    </defs>
+                    <rect x="0" y="0" width="100" height="100" fill="rgba(255,255,255,1)" mask="url(#mask-3)"></rect>
+                </svg>
+                <div class="offer-decor-bg"></div>
+            </div>
+        </div>
         <div class="offers-block__wrapper container">
             <h2 class="main_caption">пакеты услуг ремонта</h2>
             <ul class="offers-block__list">
@@ -351,7 +394,7 @@
                         </div>
                     </div>
                     <p class="offers-price">1990 <span>руб/м2</span></p>
-                    <button class="main-button">Заказать</button>
+                    <button class="main-button js-button" data-target="consultation">Заказать</button>
                 </li>
                 <li class="offers-block__item">
                     <h5 class="caption">Расширенный</h5>
@@ -390,7 +433,7 @@
                         </div>
                     </div>
                     <p class="offers-price">1990 <span>руб/м2</span></p>
-                    <button class="main-button">Заказать</button>
+                    <button class="main-button js-button" data-target="consultation">Заказать</button>
                 </li>
                 <li class="offers-block__item">
                     <h5 class="caption">Премиум</h5>
@@ -429,7 +472,7 @@
                         </div>
                     </div>
                     <p class="offers-price">1990 <span>руб/м2</span></p>
-                    <button class="main-button">Заказать</button>
+                    <button class="main-button js-button" data-target="consultation">Заказать</button>
                 </li>
                 <li class="offers-block__item">
                     <h5 class="caption">Ваш вариант</h5>
@@ -489,7 +532,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="main-button">рассчитать стоимость</button>
+                    <button class="main-button js-button" data-target="call-back">рассчитать стоимость</button>
                 </li>
             </ul>
         </div>
@@ -498,15 +541,14 @@
             <p>основные услуги</p>
         </div>
     </section>
-    <section class="our-project">
+    <section class="our-project" id="portfolio">
         <div class="our-project__wrapper container">
-            <div>
+            <div class="our-project__wrapper-info">
                 <h2 class="main_caption">Последние проекты</h2>
                 <ul class="general__list">
-                    <li>Разработка проектов. Отделочные работы.</li>
-                    <li>Поставка мебели и материалов. Решение под любой бюджет</li>
-                    <li>Начинаем работать сразу после получения заявки.</li>
+                    <li>Внашей работе мы успешно реализовываем любые стили: от класики и этно до современных минимализма и модерна</li>
                 </ul>
+                <div class="word-decor">G</div>
             </div>
             <div class="our-project__slider">
                 <div class="our-project__grid">
@@ -521,145 +563,145 @@
                     <div class="our-project__grid__item"></div>
                 </div>
                 <ul class="our-project__slider-list">
-                    <li class="our-project__slider-item opacity active start">
+                    <li class="our-project__slider-item opacity active start" data-index="1">
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-1.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio"> 
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
                         </div>
                     </li>
-                    <li class="our-project__slider-item opacity active">
+                    <li class="our-project__slider-item opacity active" data-index="2">
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-1.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio">  
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
                         </div>
                     </li>
-                    <li class="our-project__slider-item opacity active">
+                    <li class="our-project__slider-item opacity active" data-index="3">
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-2.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio"> 
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
                         </div>
                     </li>
-                    <li class="our-project__slider-item opacity active">
+                    <li class="our-project__slider-item opacity active" data-index="4">
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-4.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio"> 
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
                         </div>
                     </li>
-                    <li class="our-project__slider-item opacity active">
+                    <li class="our-project__slider-item opacity active" data-index="5"> 
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-2.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio"> 
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
                         </div>
                     </li>
-                    <li class="our-project__slider-item opacity active">
+                    <li class="our-project__slider-item opacity active" data-index="6">
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-3.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio"> 
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
                         </div>
                     </li>
-                    <li class="our-project__slider-item opacity active">
+                    <li class="our-project__slider-item opacity active" data-index="7">
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-1.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio"> 
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
                         </div>
                     </li>
-                    <li class="our-project__slider-item opacity active">
+                    <li class="our-project__slider-item opacity active" data-index="8">
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-1.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio"> 
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
                         </div>
                     </li>
-                    <li class="our-project__slider-item opacity active">
+                    <li class="our-project__slider-item opacity active" data-index="9">
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-3.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio"> 
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
                         </div>
                     </li>
-                    <li class="our-project__slider-item opacity">
+                    <li class="our-project__slider-item opacity" data-index="10">
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-1.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio"> 
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
                         </div>
                     </li>
-                    <li class="our-project__slider-item opacity">
+                    <li class="our-project__slider-item opacity" data-index="11">
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-4.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio"> 
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
                         </div>
                     </li>
-                    <li class="our-project__slider-item opacity">
+                    <li class="our-project__slider-item opacity" data-index="12">
                         <div class="our-project__slider-img">
                             <img src="./img/slider-img-1.png" alt="Фото">
                         </div>
                         <div class="our-project__slider-overlay">
                             <p>Яркий лофт для молодой пары</p>
-                            <button> 
+                            <button data-target="portfolio"> 
                                 <span>Подробнее о проекте</span>
                                 <span class="icon-arrow"></span>
                             </button>
@@ -667,7 +709,7 @@
                     </li>
                 </ul>
                 <div class="slider-button__wrapper">
-                    <button class="prev"><span class="icon-arrow"></span></button class="">
+                    <button class="prev"><span class="icon-arrow"></span></button>
                     <button class="next"><span class="icon-arrow"></span></button>
                 </div>
             </div>
@@ -678,7 +720,20 @@
         </div>
     </section>
     <section class="consultation">
-        <div class="consultatin-bg" style='background-image:url(./img/consultation-bg.png)'></div>
+        <div class="consultatin-bg" style='background-image:url(./img/consultation-bg.png)'>
+            <div class="svg-decor">
+                <svg viewBox='0 0 100 100' class="svg-content" preserveAspectRatio="none">
+                    <defs>
+                        <mask id='mask-4' x='0' y='0' width='100' height='100'>
+                            <rect x="0" y="0" width="100" height="100" fill="#fff"></rect>
+                            <text class="text" fill='#000' font-size="50px" font-family= "Playfair Display SC" font-weight="800" opacity="1">N</text>
+                        </mask>
+                    </defs>
+                    <text class="text" fill='#5b5755' font-size="50px" font-family= "Playfair Display SC"  font-weight="800" opacity="0.5">N</text>
+                    <rect x="0" y="0" width="100" height="100" fill="rgba(38,38,38,0.8)" mask="url(#mask-4)"></rect>
+                </svg>
+            </div>
+        </div>
         <div class="consultation__wrapper container">
             <div class="consultation__description">
                 <h2 class="main_caption">Бесплатная консультация</h2>
@@ -768,6 +823,7 @@
         <div class="buy-furniture__wrapper container">
             <div class="buy-furniture__img">
                 <img src="./img/furniture-img-1.png" alt="Фото-Мебели">
+                <div class="word-decor">I</div>
             </div>
             <div class="buy-furniture__description">
                 <h2 class="main_caption">Закупка мебели</h2>
@@ -783,7 +839,7 @@
                             <li>Потолочный светильник, Lucide, Бельгия, <span>21 700 руб.</span></li>
                             <li>Стул Martin, Россия, <span>14 000 руб.</span></li>
                         </ul>
-                        <button class="main-button">Заказать</button>
+                        <button class="main-button js-button" data-target="consultation">Заказать</button>
                     </li>
                     <li class="buy-furniture__item">
                         <h5 class="caption">Расширенный</h5>
@@ -793,7 +849,7 @@
                             <li>Потолочный светильник, Lucide, Бельгия, <span>21 700 руб.</span></li>
                             <li>Стул Martin, Россия, <span>14 000 руб.</span></li>
                         </ul>
-                        <button class="main-button">Заказать</button>
+                        <button class="main-button js-button" data-target="consultation">Заказать</button>
                     </li>
                     <li class="buy-furniture__item">
                         <h5 class="caption">Расширенный</h5>
@@ -803,7 +859,7 @@
                             <li>Потолочный светильник, Lucide, Бельгия, <span>21 700 руб.</span></li>
                             <li>Стул Martin, Россия, <span>14 000 руб.</span></li>
                         </ul>
-                        <button class="main-button">Заказать</button>
+                        <button class="main-button js-button" data-target="consultation">Заказать</button>
                     </li>
                 </ul>
             </div>
@@ -822,8 +878,9 @@
                     <li>Каждый проект уникален и мы составим смету, в которой будут зафиксированы сроки и стоимость работ</li>
                 </ul>
                 <div class="implementation__button">
-                    <button>К выбору услуг <span class="icon-arrow"></span></button>
+                    <button href="#offers" class='js-link'>К выбору услуг <span class="icon-arrow"></span></button>
                 </div>
+                <div class="word-decor">N</div>
             </div>
             <div class="implementation__slider">
                 <ul class="implementation__slider-list">
@@ -897,13 +954,25 @@
         </div>
     </section>
     <section class="form-block">
-        <div class="form-block-bg" style='background-image:url(./img/form-block-bg.png)'></div>
+        <div class="form-block-bg" style='background-image:url(./img/form-block-bg.png)'>
+            <div class="svg-decor">
+                <svg viewBox='0 0 100 100' class="svg-content" preserveAspectRatio="none">
+                    <defs>
+                        <mask id='mask-5' x='0' y='0' width='100' height='100'>
+                            <rect x="0" y="0" width="100" height="100" fill="#fff"></rect>
+                            <text class="text" fill='#000' id="text" font-size="60px" font-family= "Playfair Display SC" opacity="1">T</text>
+                        </mask>
+                    </defs>
+                    <text class="text" fill='#58473c' id="text" font-size="60px" font-family= "Playfair Display SC" opacity="0.4">T</text>
+                    <rect x="0" y="0" width="100" height="100" fill="rgba(38,32,28,0.7)" mask="url(#mask-5)"></rect>
+                </svg>
+            </div>
+        </div>
         <div class="form-block__wrapper container">
             <div class="form-block__description">
-                <h2 class="main_caption">Бесплатная консультация</h2>
+                <h2 class="main_caption">Начнем работу сразу же</h2>
                 <ul class="general__list">
-                    <li>Мы – не просто компания, мы – команда. За каждым нашим проектом стоит работа большого количества людей – это дизайнеры, инженеры, менеджеры по работе с фабриками. Мы делаем это все для того, чтобы каждому заказчику было удобно и комфортно работать с нами.</li><br>
-                    <li>Мы гарантируем успех проекта и будем совершенствовать результат, пока он вас не устроит</li>
+                    <li>Мы бесплатно встретимся с у вас на площадке для проведения консультации, предварительно ознакосившись с доступными документами</li>
                 </ul>
             </div>
             <div class="main-form__wrapper">
@@ -1129,7 +1198,7 @@
             <p>запись на консультацию</p>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact__wrapper container">
             <h2 class="main_caption">Контакт</h2>
             <ul class="contact__list">
@@ -1148,6 +1217,7 @@
                     <a href="mailto: another_email@mail.com">another_email@mail.com</a>
                 </li>
             </ul>
+            <div class="contact-word">E</div>
         </div>
         <div class="description-block">
             <span></span>
@@ -1177,12 +1247,13 @@
                 <button class="main-button">Отправить запрос</button>
             </div>
         </div>
-        <div class="popup-close">+</div>
+        <button class="popup-close js-close"><span class="icon-close"></span></button>
     </section>
     <section class="popup popup__consultation" data-target='consultation'>
         <div class="main-form">
             <h3 class="main-form__caption">форма записи</h3>
             <h6 class="main-form__title">Укажите площадь помещения:</h6>
+            <input type="hidden" class="title">
             <div class="main-form__square">
                 <label>
                     <input type="radio" name="square3" value="30-100 м2" checked="">
@@ -1251,36 +1322,597 @@
                 </div>
             </div>
         </div>
-        <div class="popup-close">+</div>
+        <button class="popup-close js-close"><span class="icon-close"></span></button>
     </section>
     <section class="popup popup__portfolio" data-target='portfolio'>
-        <div class="popup__portfolio-information">
-            <h2 class="main_caption">Деревянный лофт в Зиларт</h2>
-            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
-                важные задания по разработке системы обучения кадров, соответствует 
-                насущным потребностям. Разнообразный и богатый опыт консультация с 
-                широким активом представляет собой интересный эксперимент проверки 
-                направлений прогрессивного развития. Значимость этих проблем настолько 
-                очевидна, что рамки и место обучения кадров требуют определения и 
-                уточнения модели развития. Идейные соображения значение позиций, 
-                занимаемых участниками в отношении поставленных задач.</p>
-            <button class="main-button">Заказать такой же</button>
-        </div>
-        <div class="popup__portfolio-slider">
-            <div class="portfolio-slider__img">
-                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+        <button class="popup__portfolio-arrow prev disable"><span class="icon-arrow"></span></button>
+        <button class="popup__portfolio-arrow next"><span class="icon-arrow"></span></button>
+        <div class="wrapper">
+            <div class="popup__portfolio__wrapper show" data-index='1'>
+                <div class="popup__portfolio-information">
+                    <h2 class="main_caption">Деревянный лофт в Зиларт</h2>
+                    <ul class="popup__portfolio-information__list">
+                        <li class="popup__portfolio-information__item show">
+                            <ul>
+                                <li>
+                                    <span class="type">ЖК:</span>
+                                    <span class="description">Алые паруса</span>
+                                </li>
+                                <li>
+                                    <span class="type">Площадь:</span>
+                                    <span class="description">150 кв.м</span>
+                                </li>
+                                <li>
+                                    <span class="type">Сроки:</span>
+                                    <span class="description">30 дней</span>
+                                </li>
+                                <li>
+                                    <span class="type">Цена:</span>
+                                    <span class="description">150 000 руб</span>
+                                </li>
+                            </ul>
+                            <p class="first-text">Герои проекта – семейная пара с двумя детьми, мальчиками подросткового возраста. В перспективе пара подумывает еще об одном ребенке. У членов семьи очень насыщенный график, поэтому всей семьей они могут собраться только поздно вечером или в выходные. Любовь заказчиков к ярко выраженным фактурам материалов и минималистичным формам послужила отправной точкой для создания брутального, но теплого лофта.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                    </ul>
+                    <button class="main-button">Заказать такой же</button>
+                    <button class="popup-close js-close"><span class="icon-close"></span></button>
+                </div>
+                <div class="popup__portfolio-form">
+                    <div class="main-form">
+                        <input type="hidden" class="title">
+                        <h3 class="main-form__caption">Хотите заказать проект?</h3>
+                        <h6 class="main-form__title">Укажите площадь помещения:</h6>
+                        <div class="main-form__square">
+                            <label>
+                                <input type="radio" name="square3" value="30-100 м2" checked="">
+                                <span>30-100 м2</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="square3" value="100-200 м2">
+                                <span>100-200 м2"</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="square3" value="200-500 м2">
+                                <span>200-500 м2</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="square3" value=">500 м2">
+                                <span>&gt;500 м2</span>
+                            </label>
+                        </div>
+                        <h6 class="main-form__title">Выберите тип обьекта:</h6>
+                        <div class="main-form__type">
+                            <label>
+                                <input type="radio" name="type3" value="Квартира" checked="">
+                                <span class="custom-radio"></span>
+                                <p>Квартира</p>
+                            </label>
+                            <label>
+                                <input type="radio" name="type3" value="Дом">
+                                <span class="custom-radio"></span>
+                                <p>Дом</p>
+                            </label>
+                            <label>
+                                <input type="radio" name="type3" value="Офис">
+                                <span class="custom-radio"></span>
+                                <p>Офис</p>
+                            </label>
+                            <label>
+                                <input type="radio" name="type3" value="Другое">
+                                <span class="custom-radio"></span>
+                                <p>Другое</p>
+                            </label>
+                        </div>
+                        <h6 class="main-form__title">Загрузите Ваши планы:</h6>
+                        <div class="main-form__callback">
+                            <label class="main-input__wrapper">
+                                <input type="text" class="main-input" placeholder="Имя">
+                            </label>
+                            <label class="main-input__wrapper">
+                                <input type="text" class="main-input error" placeholder="Телефон*">
+                                <p class="error-text">поле не заполнено/заполнено неверно</p>
+                            </label>
+                        </div>
+                        <h6 class="main-form__title">Загрузите Ваши планы:</h6>
+                        <p class="main-form__sub-title">Необходимо для подготовки к встрече</p>
+                        <div class="main-form-button__wrapper">
+                            <div class="main-form__file">
+                                <button>
+                                    <label for="offer-file-7">Загрузить файл</label>
+                                </button>
+                                <input type="file" name="file" id="offer-file-7" class="offers-file" onchange="previewFile()">
+                                <div class="main-form__name">
+                                    <p></p>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <button class="main-button">Записаться</button>
+                        </div>
+                        <button class="popup-close"><span class="icon-close"></span></button>
+                    </div>
+                </div>
+                <div class="popup__portfolio-slider">
+                    <ul class="portfolio-slider__img-list">
+                        <li class="portfolio-slider__img-item show">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                         <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                    </ul>
+                    <div class="portfolio-slider__list__wrapper">
+                        <button class="portfolio-slider__arrow prev"><span class="icon-arrow"></span></button>
+                        <ul class="portfolio-slider__list">
+                            <li class="portfolio-slider__item active">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                        </ul>
+                        <button class="portfolio-slider__arrow next"><span class="icon-arrow"></span></button>
+                    </div>
+                </div>
             </div>
-            <ul class="portfolio-slider__list">
-                <li class="portfolio-slider__item"><img src="" alt=""></li>
-                <li class="portfolio-slider__item"><img src="" alt=""></li>
-                <li class="portfolio-slider__item"><img src="" alt=""></li>
-                <li class="portfolio-slider__item"><img src="" alt=""></li>
-                <li class="portfolio-slider__item"><img src="" alt=""></li>
-                <li class="portfolio-slider__item"><img src="" alt=""></li>
-                <li class="portfolio-slider__item"><img src="" alt=""></li>
-                <li class="portfolio-slider__item"><img src="" alt=""></li>
-            </ul>
-        </div>    
+            <div class="popup__portfolio__wrapper" data-index='2'>
+                <div class="popup__portfolio-information">
+                    <h2 class="main_caption">Деревянный лофт в Зиларт</h2>
+                    <ul class="popup__portfolio-information__list">
+                        <li class="popup__portfolio-information__item show">
+                            <ul>
+                                <li>
+                                    <span class="type">ЖК:</span>
+                                    <span class="description">Алые паруса</span>
+                                </li>
+                                <li>
+                                    <span class="type">Площадь:</span>
+                                    <span class="description">150 кв.м</span>
+                                </li>
+                                <li>
+                                    <span class="type">Сроки:</span>
+                                    <span class="description">30 дней</span>
+                                </li>
+                                <li>
+                                    <span class="type">Цена:</span>
+                                    <span class="description">150 000 руб</span>
+                                </li>
+                            </ul>
+                            <p class="first-text">Герои проекта – семейная пара с двумя детьми, мальчиками подросткового возраста. В перспективе пара подумывает еще об одном ребенке. У членов семьи очень насыщенный график, поэтому всей семьей они могут собраться только поздно вечером или в выходные. Любовь заказчиков к ярко выраженным фактурам материалов и минималистичным формам послужила отправной точкой для создания брутального, но теплого лофта.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                    </ul>
+                    <button class="main-button">Заказать такой же</button>
+                    <button class="popup-close js-close"><span class="icon-close"></span></button>
+                </div>
+                <div class="popup__portfolio-slider">
+                    <ul class="portfolio-slider__img-list">
+                        <li class="portfolio-slider__img-item show">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                    </ul>
+                    <div class="portfolio-slider__list__wrapper">
+                        <button class="portfolio-slider__arrow prev"><span class="icon-arrow"></span></button>
+                        <ul class="portfolio-slider__list">
+                            <li class="portfolio-slider__item active">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                        </ul>
+                        <button class="portfolio-slider__arrow next"><span class="icon-arrow"></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup__portfolio__wrapper" data-index='3'>
+                <div class="popup__portfolio-information">
+                    <h2 class="main_caption">Деревянный лофт в Зиларт</h2>
+                    <ul class="popup__portfolio-information__list">
+                        <li class="popup__portfolio-information__item show">
+                            <ul>
+                                <li>
+                                    <span class="type">ЖК:</span>
+                                    <span class="description">Алые паруса</span>
+                                </li>
+                                <li>
+                                    <span class="type">Площадь:</span>
+                                    <span class="description">150 кв.м</span>
+                                </li>
+                                <li>
+                                    <span class="type">Сроки:</span>
+                                    <span class="description">30 дней</span>
+                                </li>
+                                <li>
+                                    <span class="type">Цена:</span>
+                                    <span class="description">150 000 руб</span>
+                                </li>
+                            </ul>
+                            <p class="first-text">Герои проекта – семейная пара с двумя детьми, мальчиками подросткового возраста. В перспективе пара подумывает еще об одном ребенке. У членов семьи очень насыщенный график, поэтому всей семьей они могут собраться только поздно вечером или в выходные. Любовь заказчиков к ярко выраженным фактурам материалов и минималистичным формам послужила отправной точкой для создания брутального, но теплого лофта.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                        <li class="popup__portfolio-information__item">
+                            <p>Равным образом рамки и место обучения кадров позволяет выполнять 
+                        важные задания по разработке системы обучения кадров, соответствует 
+                        насущным потребностям. Разнообразный и богатый опыт консультация с 
+                        широким активом представляет собой интересный эксперимент проверки 
+                        направлений прогрессивного развития. Значимость этих проблем настолько 
+                        очевидна, что рамки и место обучения кадров требуют определения и 
+                        уточнения модели развития. Идейные соображения значение позиций, 
+                        занимаемых участниками в отношении поставленных задач.</p>
+                        </li>
+                    </ul>
+                    <button class="main-button">Заказать такой же</button>
+                    <button class="popup-close js-close"><span class="icon-close"></span></button>
+                </div>
+                <div class="popup__portfolio-slider">
+                    <ul class="portfolio-slider__img-list">
+                        <li class="portfolio-slider__img-item show">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                        <li class="portfolio-slider__img-item">
+                            <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                        </li>
+                    </ul>
+                    <div class="portfolio-slider__list__wrapper">
+                        <button class="portfolio-slider__arrow prev"><span class="icon-arrow"></span></button>
+                        <ul class="portfolio-slider__list">
+                            <li class="portfolio-slider__item active">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                            <li class="portfolio-slider__item">
+                                <img src="./img/popup-slider-img-1.jpg" alt="Фото">
+                            </li>
+                        </ul>
+                        <button class="portfolio-slider__arrow next"><span class="icon-arrow"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <div class="overlay"></div>
     <script src="./js/jquery-3.3.1.min.js"></script>

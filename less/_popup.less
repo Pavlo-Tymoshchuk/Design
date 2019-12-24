@@ -78,8 +78,340 @@
 }
 
 .popup-close {
+    border:none;
+    background: none;
     position: absolute;
     right: 20px;
     top: 20px;
     cursor: pointer;
+    outline: none;
+    
+    &:hover {
+        span {
+            &:before {
+                color: #ababab;
+                transition: color .4s;
+            }
+        }
+        &:active {
+            span {
+                &:before {
+                    color: #1a1a1a;
+                }
+            }
+        }
+    }
+}
+
+/* Portfolio slider */
+
+.popup__portfolio {
+    overflow: initial;
+}
+
+.popup__portfolio {
+    .wrapper {
+        position: relative;
+    }
+}
+
+.popup__portfolio-arrow {
+    position: absolute;
+    left: -55px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    
+    span {
+        color: #fff;
+    }
+    
+    &.prev {
+        transform: rotate(180deg);
+    }
+    
+    &.next {
+        left: initial;
+        right: -55px;
+    }
+    
+    &:hover {
+        span {
+            color: #f3a362;
+            transition: color .4s;
+        }
+        
+        &:active {
+            span {
+                color: #1a1a1a;
+            }
+        }
+    }
+    
+    &.disable {
+        pointer-events: none;
+    }
+}
+.popup__portfolio__wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    opacity: 0;
+    left: 0px;
+    top: 0px;
+    transition: opacity .4s;
+    z-index: -1;
+    
+    &.show {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .popup__portfolio-form {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 855px;
+        height: 100%;
+        opacity: 0;
+        z-index: -1;
+        box-shadow: inset 0px 15px 25px 0px rgba(0, 0, 0, 0.05);
+        transition: opacity .4s;
+        
+        .main-button {
+            max-width: 360px;
+        }
+        
+        &.show {
+            opacity: 1;
+            z-index: 3;
+        }
+    }
+    
+    .main-form {
+        width: 100%;
+    }
+    
+    .main-form__caption {
+        font-size: 36px;
+    }
+    
+    .main-form__title {
+        margin: 28px 0px;
+    }
+    
+    .main-input {
+        width: 360px;
+    }
+    
+    .main-form__file {
+        button {
+            width: 360px;
+        }
+    }
+}
+
+.popup__portfolio-information {
+    position: relative;
+    width: 450px;
+    padding: 60px;
+    color: #4c443f;
+    
+    .main_caption {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 30px;
+    }
+    
+    p {
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 35px;
+    }
+    
+    .disable {
+        position: relative;
+        pointer-events: none;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(243, 197, 159);
+            opacity: 0.4;
+        }
+    }
+}
+
+.popup__portfolio-information__list {
+    position: relative;
+    height: 387px;
+}
+
+.popup__portfolio-information__item {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .4s;
+    
+    &.show {
+        position: relative;
+        opacity: 1;
+        z-index: 2;
+    }
+    
+    li {
+        display: flex;
+        justify-content: space-between;
+        color: #4c443f;
+        font-size: 16px;
+        line-height: 28px;
+        border-bottom: 1px solid #d3d3d3;
+        margin-bottom: 30px;
+    }
+    
+    .description {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .first-text {
+        height: 129px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+.popup__portfolio-slider {
+    width: 855px;
+}
+
+.portfolio-slider__img-list {
+    width: 855px;
+    height: 535px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio-slider__img-item {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .4s;
+    
+    &.show {
+        opacity: 1;
+    }
+    
+    img {
+        max-height: initial;
+        height: 100%;
+    }
+}
+
+.portfolio-slider__list__wrapper {
+    width: 855px;
+    height: 130px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.portfolio-slider__list {
+    display: flex;
+    width: 10000px;
+    margin-left: 35px;
+    user-select: none;
+    transition: margin-left .8s;
+}
+
+.portfolio-slider__item {
+    width: 196px;
+    height: 130px;
+    position: relative;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        opacity: 1;
+        transition: opacity .4s;
+    }
+    
+    &.active {
+        &::before {
+            opacity: 0;
+        }
+    }
+    
+    img {
+        max-height: initial;
+        height: 100%;
+    }
+}
+
+.portfolio-slider__arrow {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 35px;
+    background-color: #877f7a;
+    border: 1px solid #877f7a;
+    outline: none;
+    cursor: pointer;
+    z-index: 2;
+    
+    span {
+        color: #cfccca;
+    }
+    
+    &.prev {
+        transform: rotate(180deg);
+    }
+    
+    &.next {
+        left: initial;
+        right: 0px;
+    }
+    
+    &:hover {
+        background-color: #fff;
+        border-color: #f3a362;
+        transition:  background-color .4s, border-color .4s;
+        
+        span {
+            color: #f3a362;
+            transition: color .4s;
+        }
+        
+        &:active {
+            border-color: #1a1a1a;
+            
+            span {
+                color: #1a1a1a;
+            }
+        }
+    }
+    
+    &.disable {
+        pointer-events: none;
+    }
 }

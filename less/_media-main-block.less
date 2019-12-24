@@ -1,0 +1,137 @@
+@media(max-width: 1715px) {
+    
+    .container {
+        max-width: 1200px;
+    }
+    
+    .general__caption {
+        font-size: 62px;
+        line-height: 90px;
+    }
+    
+    .main_caption {
+        font-size: 52px;
+        line-height: 60px;
+    }
+    
+    /* Main- block */
+    
+    .main-block {
+        height: 740px;
+    }
+    
+    .main-block__item {
+        padding-top: 160px;
+        
+        &:nth-child(2) {
+            padding-left: 70px;
+        }
+    }
+    
+    /* /Main- block */
+    
+    /* Our works */
+    
+    .our-works__wrapper {
+        flex-direction: column;
+        
+        .word-decor {
+            z-index: -2;
+            left: calc(50% + 35px);
+        }
+    }
+    
+    .our-works__block {
+        width: 100%;
+        
+        .our-works__list-wrapper {
+            right: 15px;
+        }
+        
+        .ou-works__img {
+            display: flex;
+            justify-content: flex-end;
+            
+            &::before {
+                height: 580px;
+                width: 385px;
+                right: -60px;
+                z-index: -1;
+            }
+        }
+        
+        &:nth-child(2) {
+            display: flex;
+            justify-content: flex-end;
+            margin: 100px 0px;
+            
+            .our-works__list-wrapper {
+                left: 15px;
+            }
+            
+            .ou-works__img {
+                justify-content: flex-start;
+                
+                &::before {
+                    right: 0;
+                    left: -60px;
+                }
+            }
+        }
+    }
+    
+    /* Our works */
+    
+    /* Offers */
+    
+    .offers-block  {
+        padding-bottom: 100px;
+        
+         .svg-decor {
+             top: -1px;
+         }
+    }
+    
+    .offers-block__list {
+        padding: 30px;
+        margin-right: -70px;
+        margin-top: -30px;
+    }
+    
+    /* /Offers */
+    
+    /* Our project */
+    
+    .our-project__wrapper {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .our-project__wrapper-info {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        
+        .main_caption {
+            width: 340px;
+            margin-right: 130px;
+            margin-bottom: 0px;
+        }
+        
+         .word-decor {
+            top: 100%;
+            left: -70px;
+            transform: translateY(-40%);
+         }
+    }
+    
+    /* /Our project */
+    
+    /* Consultation */
+    
+    .consultatin-bg  {
+        .svg-decor {
+            padding-bottom: 100%;
+        }
+    }
+}
