@@ -666,6 +666,7 @@ button {
   margin-top: -110px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .main-block__wrapper {
   display: -webkit-box;
@@ -685,13 +686,13 @@ button {
   z-index: -1;
   display: inline-block;
   width: 100%;
-  padding-bottom: 150%;
+  padding-bottom: 300%;
   vertical-align: middle;
   overflow: hidden;
 }
 .main-block__wrapper .svg-decor .text {
-  -webkit-transform: translate(0px, -70px);
-  transform: translate(0px, -70px);
+  -webkit-transform: translate(0px, -120px);
+  transform: translate(0px, -120px);
   font-size: 50px;
 }
 .main-block__wrapper .svg-decor .svg-content {
@@ -935,8 +936,8 @@ button {
   top: calc(50% + 140px);
 }
 .offers-block .text {
-  -webkit-transform: translate(calc(50% + 25px), calc(50% - 21px));
-  transform: translate(calc(50% + 25px), calc(50% - 21px));
+  -webkit-transform: translate(calc(50% + 25px), calc(50% - 71px));
+  transform: translate(calc(50% + 25px), calc(50% - 71px));
 }
 .offers-block .svg-decor {
   position: absolute;
@@ -945,14 +946,14 @@ button {
   z-index: -1;
   display: inline-block;
   width: 100%;
-  padding-bottom: 100%;
+  padding-bottom: 200%;
   vertical-align: middle;
   overflow: hidden;
 }
 .offers-block .svg-decor .offer-decor-bg {
   position: absolute;
   left: 50%;
-  top: 10%;
+  top: 5%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 90%;
@@ -980,6 +981,7 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+  overflow: hidden;
 }
 .offers-block__background::before {
   content: "";
@@ -1442,13 +1444,13 @@ button {
   z-index: -1;
   display: inline-block;
   width: 100%;
-  padding-bottom: 75%;
+  padding-bottom: 150%;
   vertical-align: middle;
   overflow: hidden;
 }
 .consultatin-bg .svg-decor .text {
-  -webkit-transform: translate(calc(50% - 35px), calc(50% - 5px));
-  transform: translate(calc(50% - 35px), calc(50% - 5px));
+  -webkit-transform: translate(calc(50% - 35px), calc(50% - 52px));
+  transform: translate(calc(50% - 35px), calc(50% - 52px));
 }
 .consultatin-bg .svg-decor .svg-content {
   display: inline-block;
@@ -1972,13 +1974,13 @@ button {
   z-index: 1;
   display: inline-block;
   width: 100%;
-  padding-bottom: 100%;
+  padding-bottom: 200%;
   vertical-align: middle;
   overflow: hidden;
 }
 .form-block-bg .svg-decor .text {
-  -webkit-transform: translate(calc(50% - 30px), calc(50% - -3px));
-  transform: translate(calc(50% - 30px), calc(50% - -3px));
+  -webkit-transform: translate(calc(50% - 30px), calc(50% - 45px));
+  transform: translate(calc(50% - 30px), calc(50% - 45px));
 }
 .form-block-bg .svg-decor .svg-content {
   display: inline-block;
@@ -2906,9 +2908,6 @@ button {
   }
   /* /Our project */
   /* Consultation */
-  .consultatin-bg .svg-decor {
-    padding-bottom: 100%;
-  }
   .consultation__description {
     max-width: 450px;
     margin-right: 20px;
@@ -3016,8 +3015,8 @@ button {
     padding-top: 170px;
   }
   .main-block__wrapper .svg-decor .text {
-    -webkit-transform: translate(0px, -45px);
-    transform: translate(0px, -45px);
+    -webkit-transform: translate(0px, -100px);
+    transform: translate(0px, -100px);
     font-size: 65px;
   }
   .main-block__item {
@@ -3091,12 +3090,18 @@ button {
   /* /Our works */
   /* Offers */
   .offers-block .text {
-    -webkit-transform: translate(calc(50% + -32px), calc(50% - 6px));
-    transform: translate(calc(50% + -32px), calc(50% - 6px));
+    -webkit-transform: translate(calc(50% + -32px), calc(50% - 55px));
+    transform: translate(calc(50% + -32px), calc(50% - 55px));
     font-size: 60px;
   }
+  .offers-block .svg-decor .top-line {
+    height: 7px;
+  }
+  .offers-block .svg-decor .decor-bg {
+    height: 120px;
+  }
   .offers-block .svg-decor .offer-decor-bg {
-    height: 30%;
+    height: 100%;
   }
   .offers .text {
     -webkit-transform: translate(70px, 20px);
@@ -3112,6 +3117,9 @@ button {
   }
   .main-form__file button {
     width: 100%;
+  }
+  .offers-block__wrapper {
+    padding-top: 115px;
   }
   /* Offers */
   /* Out project */
@@ -3254,8 +3262,8 @@ button {
     height: 640px;
   }
   .form-block-bg .svg-decor .text {
-    -webkit-transform: translate(calc(50% - 17px), calc(50% - -3px));
-    transform: translate(calc(50% - 17px), calc(50% - -3px));
+    -webkit-transform: translate(calc(50% - 17px), calc(50% - 52px));
+    transform: translate(calc(50% - 17px), calc(50% - 52px));
   }
   .form-block {
     height: 1130px;
@@ -3445,13 +3453,13 @@ button {
 }
 @media (max-width: 1024px) {
   .main-block__wrapper .svg-decor .text {
-    -webkit-transform: translate(0px, -25px);
-    transform: translate(0px, -25px);
+    -webkit-transform: translate(0px, -85px);
+    transform: translate(0px, -85px);
     font-size: 95px;
   }
   .offers-block .text {
-    -webkit-transform: translate(calc(50% + -42px), calc(50% - -13px));
-    transform: translate(calc(50% + -42px), calc(50% - -13px));
+    -webkit-transform: translate(calc(50% - 42px), calc(50% - 40px));
+    transform: translate(calc(50% - 42px), calc(50% - 40px));
     font-size: 80px;
   }
   .offers .text {
@@ -3460,12 +3468,21 @@ button {
   }
   .consultatin-bg .svg-decor .text {
     font-size: 60px;
+    -webkit-transform: translate(calc(50% - 35px), calc(50% - 45px));
+    transform: translate(calc(50% - 35px), calc(50% - 45px));
   }
 }
 @media (max-width: 768px) {
   /* General */
   .container {
     max-width: 360px;
+  }
+  .main_caption {
+    font-size: 32px;
+    line-height: 46px;
+  }
+  .description-block {
+    display: none;
   }
   /* /General */
   /* Header */
@@ -3482,6 +3499,11 @@ button {
   .main-block__wrapper {
     padding-top: 125px;
   }
+  .main-block__wrapper .svg-decor .text {
+    -webkit-transform: translate(0px, -50px);
+    transform: translate(0px, -50px);
+    font-size: 95px;
+  }
   .main-block__item .general__list {
     margin: 30px 0px;
   }
@@ -3490,5 +3512,30 @@ button {
   }
   .main-block__call-back {
     bottom: 120px;
+  }
+  /* Main-block */
+  /* Our project */
+  .our-project__slider {
+    right: -700px;
+  }
+  .our-project__wrapper .general__list {
+    margin-bottom: 30px;
+  }
+  .our-project__wrapper-info .word-decor {
+    font-size: 480px;
+    left: 0px;
+    -webkit-transform: translateY(-45%);
+    transform: translateY(-45%);
+  }
+  /* Offers */
+  .offers-block .svg-decor .top-line {
+    height: 10px;
+  }
+  .offers-block .svg-decor .decor-bg {
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+  }
+  .offers-block .svg-decor .offer-decor-bg {
+    top: 11%;
   }
 }
