@@ -8,11 +8,13 @@
     margin-top: -110px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 .main-block__wrapper {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
     
     .svg-decor {
         position: absolute;
@@ -22,12 +24,13 @@
         z-index: -1;
         display: inline-block;
         width: 100%;
-        padding-bottom: 55%; 
+        padding-bottom: 300%; 
         vertical-align: middle; 
         overflow: hidden; 
         
         .text {
-           transform: translate(calc(50% - 18px), calc(50% - 7px));
+           transform: translate(0px, -120px);
+           font-size: 50px;
         }
         
        .svg-content {
@@ -300,7 +303,7 @@
     }
     
     .text {
-        transform: translate(calc(50% + 25px), calc(50% - 21px));
+        transform: translate(calc(50% + 25px), calc(50% - 71px));
     }
     
     .svg-decor {
@@ -310,14 +313,14 @@
         z-index: -1;
         display: inline-block;
         width: 100%;
-        padding-bottom: 100%; 
+        padding-bottom: 200%; 
         vertical-align: middle; 
         overflow: hidden; 
         
         .offer-decor-bg {
             position: absolute;
             left: 50%;
-            top: 10%;
+            top: 5%;
             transform: translateX(-50%);
             width: 90%;
             height: 555px;
@@ -349,6 +352,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+    overflow: hidden;
     
     &::before {
         content: "";
@@ -383,7 +387,6 @@
     display: flex;
     margin-right: -30px;
     margin-top: 40px;
-    overflow-x: scroll;
 }
 
 .offers-block__item {
@@ -439,6 +442,18 @@
         box-shadow: none;
         padding: 0px;
     }
+
+    .main-form__square {
+        label {
+            width: calc(50% - 10px);
+        }  
+    }
+
+    .main-form__type {
+        label {
+            width: calc(50% - 10px);
+        }
+    } 
 }
 
 .offers_button__wrapper {
@@ -808,12 +823,12 @@
         z-index: -1;
         display: inline-block;
         width: 100%;
-        padding-bottom: 75%; 
+        padding-bottom: 150%; 
         vertical-align: middle; 
         overflow: hidden; 
         
         .text {
-           transform: translate(calc(50% - 35px), calc(50% - 5px));
+           transform: translate(calc(50% - 35px), calc(50% - 52px));
         }
         
        .svg-content {
@@ -872,6 +887,10 @@
 .consultation__description {
     max-width: 650px;
     margin-right: 140px;
+
+    p {
+        max-width: 590px;
+    }
 }
 
 /* Consultation */
@@ -924,6 +943,12 @@
 
 .buy-furniture__description {
     max-width: 910px;
+
+    .general__list {
+        p {
+            max-width: 100%;
+        }
+    }
 }
 
 .buy-furniture__list {
@@ -998,7 +1023,7 @@
 }
 
 .implementation__description {
-    width: 660px;
+    max-width: 660px;
     position: relative;
     
     .main_caption {
@@ -1010,6 +1035,10 @@
     
     .general__list {
         color: #4c443f;
+
+        p {
+            max-width: 590px;
+        }
     }
     
     &::before {
@@ -1314,12 +1343,12 @@
         z-index: 1;
         display: inline-block;
         width: 100%;
-        padding-bottom: 67%; 
+        padding-bottom: 200%; 
         vertical-align: middle; 
         overflow: hidden; 
         
         .text {
-           transform: translate(calc(50% - 30px), calc(50% - -3px));
+           transform: translate(calc(50% - 30px), calc(50%  - 45px));
         }
         
        .svg-content {

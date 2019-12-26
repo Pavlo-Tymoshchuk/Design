@@ -30,7 +30,43 @@ document.addEventListener("DOMContentLoaded", function() {
         
         $(".popup__consultation .title").val(mainTitle + "/" + title);
     });
+
+    init();
 });
+
+// Resize 
+$(window).on('resize', function() {
+    rangeSlider();
+});
+
+// /Resize
+
+// Touch 
+
+function touchHandler(event) {
+    var touch = event.changedTouches[0];
+
+    var simulatedEvent = document.createEvent("MouseEvent");
+        simulatedEvent.initMouseEvent({
+        touchstart: "mousedown",
+        touchmove: "mousemove",
+        touchend: "mouseup"
+    }[event.type], true, true, window, 1,
+        touch.screenX, touch.screenY,
+        touch.clientX, touch.clientY, false,
+        false, false, false, 0, null);
+
+    touch.target.dispatchEvent(simulatedEvent);
+}
+
+function init() {
+    document.addEventListener("touchstart", touchHandler, true);
+    document.addEventListener("touchmove", touchHandler, true);
+    document.addEventListener("touchend", touchHandler, true);
+    document.addEventListener("touchcancel", touchHandler, true);
+}
+
+// /Touch
 
 // Scroll to block
 
@@ -169,7 +205,7 @@ $('.implementation .prev').on('click', function() {
     }
 });
 
-$(function() {
+function rangeSlider() {
     let widthContainer = $('.implementation__slider-item.show').width();
 
 	$('.implementation__range').draggable({
@@ -196,7 +232,9 @@ $(function() {
         }
     });
 
-});
+};
+
+rangeSlider();
 
 // /Slider implementation
 
