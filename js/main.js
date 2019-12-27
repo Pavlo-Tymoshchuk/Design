@@ -34,6 +34,12 @@ document.addEventListener("DOMContentLoaded", function() {
     init();
 });
 
+if($(window).width() < 768) {
+    $('.our-works__caption').on('click',function(){
+        $(this).toggleClass('active');
+    });
+}
+
 // Resize 
 $(window).on('resize', function() {
     rangeSlider();
