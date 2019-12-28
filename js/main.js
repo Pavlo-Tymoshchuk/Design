@@ -74,6 +74,31 @@ function init() {
 
 // /Touch
 
+  
+function scrollLeft(elem) {
+    function scrollHorizontally(e) {
+        e = window.event || e;
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        elem.scrollLeft -= (delta*40);
+        // elem.scrollLeft = 150;
+        // Multiplied by 40
+        e.preventDefault();
+    }
+    if (elem.addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        elem.addEventListener("mousewheel", scrollHorizontally, false);
+        // Firefox
+        elem.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+    } else {
+        // IE 6/7/8
+        elem.attachEvent("onmousewheel", scrollHorizontally);
+    }
+};
+
+let offersFirst = document.querySelector('.offers-block__list');
+let offersSecond = document.getElementById('offers-1');
+scrollLeft(offersFirst);
+scrollLeft(offersSecond);
 // Scroll to block
 
 $('.js-link').on('click',function(){
@@ -286,7 +311,6 @@ $('.main-form__button .prev').on('click', function(){
 
 $('.js-button').on('click',function() {
     let target = $(this).attr('data-target');
-    console.log(target)
     $('.popup[data-target= ' + target + ']').addClass('show');
     $('.overlay').addClass('show');
     $('html').addClass('overflow')
